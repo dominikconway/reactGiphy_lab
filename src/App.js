@@ -6,8 +6,8 @@ function App() {
 
   const [gif, setGif] = useState(null)
 
-  const generateGif = async () => {
-    const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${api_key}&tag=&rating=g`)
+  const generateGif = async (searchterm) => {
+    const response = await fetch(`https://api.giphy.com/v1/gifs/random?api_key=${api_key}&tag=${searchterm}&rating=g`)
 
     const data = await response.json()
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
      <Form generateGif={generateGif} />
-     <GifDisplay />
+     <GifDisplay gif={gif} />
      
     </div>
   );

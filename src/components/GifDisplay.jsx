@@ -1,7 +1,8 @@
-const GifDisplay = ({gif}) => {
+const GifDisplay = (props) => {
+
     return (
     <div>
-        <h1></h1>
+         <img src={props.gif.data.images.downsized.url} alt={props.gif.data.title}/>
     </div>
     )
 }

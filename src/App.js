@@ -1,6 +1,7 @@
 import GifDisplay from "./components/GifDisplay";
 import Form from "./components/Form";
 import {useState} from 'react'
+
 function App() {
   const api_key = 'aMa73CBQLRvwQCnyX5U7AfCefAHQEeJI'
 
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      
      <Form generateGif={generateGif} />
      <GifDisplay gif={gif} />
      
